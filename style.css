@@ -306,7 +306,7 @@ header ul li a:hover{
     background-color: #222222;
     padding-bottom: 80px;
 }
-.about .title{
+section .title{
     position: relative;
     font-family: 'Ubuntu', sans-serif;
     font-size: 45px;
@@ -317,29 +317,33 @@ header ul li a:hover{
     color: #fff;
 
 }
-.about .title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
-    width: 140px;
     height: 7px;
     border-radius: 4px;
     background: crimson;
 }
 
 
-.about .title::after{
-    content: "whoami";
+section .title::after{
     position: absolute;
     bottom: -11px;
     left: 50%;
     padding: 5px;
     font-size: 20px;
     letter-spacing: 2px;
-    background: #222222;
     transform: translate(-50%);
+}
+.about .title::after{
+    content: "whoami";
+    background: #222222;
+}
+.about .title::before{
+    width: 140px;
 }
 .about .about_content {
     display: flex;
@@ -425,15 +429,84 @@ header ul li a:hover{
 /* n */
 
 
-#projects{
+/* service */
+
+.services{
     width: 100%;
-    height: 100vh;
-    background-color: #ffffff;
+    background-color: #fff;
+    font-family: "Poppins", sans-serif;
 }
+.services .title{
+    color: #000;
+}
+.services .title::after{
+    content: "my package";
+    background: #fff;
+    color: #000;
+}
+.services .title::before{
+    width: 180px;
+}
+.services .serv_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services .serv_content .card_item{
+    padding-top: 20px;
+    width: calc(25% - 20px);
+    text-align: center;
+    background: #e2e2e2;
+    border-radius: 15px;
+    transition: 0.4s all ease;
+    
+}
+.services .serv_content .card_item:hover{
+    transform: scale(1.06);
+}
+.services .serv_content .card_item:hover .text{
+    color: #000;
+}
+.services .serv_content .card_item:hover p{
+    color: crimson;
+}
+
+.services .serv_content .card_item:hover img{
+    transform: translate(0, 10%);
+}
+.services .serv_content .card_item img{
+    height: 190px;
+    width: 190px;
+    object-fit: cover;
+    margin: 15px 0;
+    transition: 0.4s all ease;
+}
+
+.services .serv_content .card_item .text{
+    color: crimson;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 15px 0;
+}
+.services .serv_content .card_item p{
+    padding: 0 0 5px 0;
+}
+
+/* s */
+/* e */
+/* c */
+/* t */
+/* i */
+/* o */
+/* n */
+
+
+
 #testimonials{
     width: 100%;
     height: 100vh;
-    background-color: #64e8ff;
+    background-color: rgb(98, 253, 253);
 }
 
 
@@ -445,7 +518,7 @@ header ul li a:hover{
 
 /* media query */
 
-@media (max-width: 1020px){
+@media (max-width: 1024px){
     .about .about_content .sideBarRight,
     .about .about_content .sideBarLeft{
         width: 44%;
@@ -454,6 +527,14 @@ header ul li a:hover{
     .about .about_content .sideBarLeft img{
         height: 340px;
         width: 340px;
+    }
+    
+    .services .serv_content {
+        flex-direction: column;
+    }
+    .services .serv_content .card_item{
+        width: 65%;
+        margin: 15px 0;
     }
 }
 
@@ -478,7 +559,7 @@ header ul li a:hover{
         height: 100vh;
         top: 0;
         left: -100%;
-        background-color: rgb(48, 199, 245);
+        background-color: rgb(98, 253, 253);
         text-align: center;
         padding-top: 70px;
         transition: all 0.4s ease;
@@ -578,6 +659,9 @@ header ul li a:hover{
     .about .about_content .sideBarRight,
     .about .about_content .sideBarLeft{
         width: 95%;
+    }
+    .services .serv_content .card_item{
+        width: 90%;
     }
 
 
