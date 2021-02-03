@@ -301,6 +301,10 @@ header ul li a:hover{
     margin: auto;
 }
 
+.about, .services, .testimonials{
+    font-family: 'Poppins', sans-serif;
+}
+
 .about{
     font-family: 'Poppins', sans-serif;
     background-color: #222222;
@@ -493,6 +497,7 @@ section .title::after{
     padding: 0 0 5px 0;
 }
 
+/* services */
 /* s */
 /* e */
 /* c */
@@ -501,19 +506,104 @@ section .title::after{
 /* o */
 /* n */
 
+/* testimonials */
 
-
-#testimonials{
+.testimonials{
     width: 100%;
-    height: 100vh;
-    background-color: rgb(98, 253, 253);
+    background-color: #222222;
+    padding-bottom: 80px;
 }
 
+.testimonials .title::before{
+    width: 240px;
+}
+.testimonials .title{
+    color: #fff;
+}
+.testimonials .title::after{
+    content: "what people say";
+    background: #222222;
+    color: #fff;
+}
+.testimonials .carousel .card_b{
+    background: #262626;
+    border-radius: 5px;
+    padding: 20px 35px;
+    transition: all 0.4s ease;
+}
+
+.testimonials .carousel .card_b:hover{
+    background: #fff;
+    transform: scale(0.95);
+}
+.testimonials .carousel .card_b .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+.testimonials .carousel .card_b:hover .box{
+    transform: scale(1.05);
+    border-radius: 15px;
+}
+.testimonials .carousel .card_b .text{
+    font-size: 24px;
+    font-weight: 400;
+    color: crimson;
+    padding: 15px 0 7px 0;
+}
+.testimonials .carousel .card_b p{
+    color: #fff;
+    padding: 7px 0;
+    line-height: 36px;
+    font-weight: lighter;
+    transition: all 0.4s ease;
+}
+.testimonials .carousel .card_b img{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgb(255, 102, 0);
+}
+
+
+.testimonials .carousel .card_b:hover p{
+    color: #000;
+}
+
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 7px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+}
+.owl-dot.active{
+    width: 34px;
+    border-radius: 14px;
+}
+/* s */
+/* e */
+/* c */
+/* t */
+/* i */
+/* o */
+/* n */
 
 @keyframes zoom{
     from{transform: scale(0)}
     to{transform: scale(1)}
 }
+
 
 
 /* media query */
@@ -585,14 +675,16 @@ section .title::after{
     .container{
         padding: 0;
     }
-    .about .title{
-        font-size: 30px;
+    /* all section */
+    section .title{
+        font-size: 36px;
         padding-top: 80px;
     }
         
-    .about .title::after{
+    section .title::after{
         font-size: 18px;
     }
+    /* all section */
     .about .about_content {
         flex-direction: column;
         align-items: center;
@@ -662,6 +754,13 @@ section .title::after{
     }
     .services .serv_content .card_item{
         width: 90%;
+    }
+    .services .serv_content .card_item .text{
+        font-size: 28px;
+    }
+    .services .serv_content .card_item p{
+        font-size: 24px;
+        padding: 0 15px;
     }
 
 
