@@ -521,7 +521,7 @@ section .title::after{
     color: #fff;
 }
 .testimonials .title::after{
-    content: "what people say";
+    content: "people say";
     background: #222222;
     color: #fff;
 }
@@ -529,6 +529,7 @@ section .title::after{
     background: #262626;
     border-radius: 5px;
     padding: 20px 35px;
+    margin: 0 20px;
     transition: all 0.4s ease;
 }
 
@@ -585,12 +586,18 @@ section .title::after{
     margin: 0 7px;
     outline: none!important;
     border-radius: 50%;
-    border: 2px solid crimson!important;
+    border: 2px solid #fff!important;
+    transition: all 0.4s ease;
 }
 .owl-dot.active{
     width: 34px;
     border-radius: 14px;
 }
+.owl-dot.active,
+.owl-dot:hover{
+    background: #fff!important;
+}
+/* testimonials */
 /* s */
 /* e */
 /* c */
@@ -598,6 +605,101 @@ section .title::after{
 /* i */
 /* o */
 /* n */
+
+/* contact */
+.contact{
+    background: #000;
+    color: #fff;
+    font-family: 'Poppins' sans-serif;
+}
+.contact .title::after{
+    content: "contact me";
+    background: #000;
+    color: #fff;
+}
+.contact .title::before{
+    width: 180px;
+}
+
+
+.contact .bigBox{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.contact .bigBox .text{
+    color: crimson;
+    font-size: 26px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.contact .bigBox p{
+    line-height: 28px;
+    font-size: 18px;
+    color: #fff;
+}
+.contact .bigBox .cont a{
+    line-height: 28px;
+    font-size: 20px;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+.contact .bigBox .cont a:hover{
+    color: crimson;
+}
+.contact ul li{
+    list-style: none;
+    line-height: 28px;
+    font-size: 18px;
+    display: block;
+}
+
+.contact ul li a{
+    color: #fff;
+    transition: all 0.4s ease;
+}
+.contact .social ul li a span{
+    display: none;
+    /* transition: all 0.4s ease; */
+}
+.contact ul li a:hover{
+    color: crimson;
+}
+
+.contact .social ul li a:hover span{
+    display: inline-block;
+}
+
+.contact .social ul li a:hover i{
+    display: none;
+}
+/* contact */
+/* s */
+/* e */
+/* c */
+/* t */
+/* i */
+/* o */
+/* n */
+
+footer{
+    text-align: center;
+    background:  rgb(98, 253, 253);
+    color: #000;
+    letter-spacing: 1.2px;
+    
+}
+footer p{
+    margin: auto;
+    padding: 10px 0;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+footer .design{
+    font-weight: 600;
+
+}
 
 @keyframes zoom{
     from{transform: scale(0)}
@@ -761,7 +863,23 @@ section .title::after{
     .services .serv_content .card_item p{
         font-size: 24px;
         padding: 0 15px;
+
+
     }
+    .contact .bigBox{
+        margin: auto;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cont, .social, .ql{
+        width: 100%;
+        padding: 10px 0 0 40px;
+        line-height: 30px;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+
 
 
     
