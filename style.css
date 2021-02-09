@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@378;500;600;700&family=Ubuntu:wght@378;500;700&display=swap');
 *{
     margin: 0;
     padding:  0;
@@ -72,8 +72,8 @@ header ul li a:hover{
 
 
 .mainMenu{
-    max-width: 75%;
-    margin: auto;
+    max-width: 100%;
+    margin: 0 80px;
     padding: 0, 80px;
 }
 .navBar{
@@ -82,7 +82,7 @@ header ul li a:hover{
     width: 100%;
     margin: auto;
     transition: all 0.3 ease-in-out;
-    z-index: 3;
+    z-index: 998;
 }
 
 .navBar.sticky{
@@ -117,7 +117,7 @@ header ul li a:hover{
 .navBar .menu li a:hover{
     color: crimson;
 }
-/* card button end */
+
 
 .navBar .menu_btn{
     color: #fff;
@@ -132,7 +132,6 @@ header ul li a:hover{
 
 .home{
     width: 100%;
-    height: 100vh;
     background: url(img/dark_lap.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -140,27 +139,28 @@ header ul li a:hover{
     margin: 0 auto;
 }
 
-.parent{
-    display: flex;
-    flex-direction: column;
-}
+/* nav */
+/* s */
+/* e */
+/* c */
+/* t */
+/* i */
+/* o */
+/* n */
+
+/* home */
+
 .home_txt{
-    width: 75%;
     margin: auto;
-    left: 0;
-    right: 0;
-    transform: translate(0, 100%);
 }
 .home_txt h1{
     color: #fff;
     font-size: 66px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 4.5px;
 }
 .home_txt .title{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
-    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 
-    sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: rgb(98, 253, 253);
     font-size: 86px;
     line-height: 86px;
@@ -174,15 +174,11 @@ header ul li a:hover{
 
 .home_txt h4 .sub_title{
     color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .intro_txt{
-    width: 65%;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    transform: translate(0, 300%);
+    margin: auto;
 }
 .intro_txt p{
     font-family: Courier, monospace;
@@ -191,101 +187,140 @@ header ul li a:hover{
     letter-spacing: 3px;
 }
 
-.cardHolder{
-    width: 75%;
+.skills{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin: auto;
-    transform: translate(0, 20%);
-    position: absolute;
-    bottom: 10%;
-    left: 0;
-    right: 0;
-}
-
-.cardHolder .card{
-    width: 180px;
-    margin: 0;
-    border: 1px groove rgb(255, 255, 255);
-    border-radius: 4px;
-    text-align: center;
-    position: relative;
-    display: block;
-    overflow: hidden;
-    transition: .2s;
-}
-.card a{
-    text-decoration: none;
-}
-
-.card h3{
-    color: rgb(250, 7, 47);
-    font-family: 'Poppins';
-    font-size: 22px;
-    font-weight: lighter;
-}
-.card p{
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: lighter;
-    letter-spacing: 1px;
-    font-size: 14px;
-    line-height: 19px;
+    margin: 60px 0 0 0;
+    padding: 20px 0;
 }
 
-
-.card:before{
+/* skills cards */
+.card{
+    position: relative;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background: rgba(0, 0, 0, 0.246);
+    margin: 0 10px;
+    padding: 10px 0;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+.card::before{
     content: '';
     position: absolute;
-    bottom: -100px;
-    left: -200px;
+    top: 0;
+    left: -50%;
     width: 100%;
     height: 100%;
-    transition: .2s;
+    background: rgba(255, 255, 255, 0.328);
+    pointer-events: none;
 }
-
-.card:hover:before{
+.card:hover{
+    transform: translateY(-10px);
+}
+.percent{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50% #000;
+    background: #222;
+    z-index: 996;
+}
+.percent .number{
+    position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
-.card:hover p, .card:hover h3{
+.percent .number h2{
+    font-size: 36px;
+    font-weight: 500;
+    transition: all 0.4s ease;
+}
+
+.percent .number h2 span{
+    font-size: 20px;
+}
+.card:hover .percent .number h2{
     color: #fff;
-    opacity: 0;
-    transition: .4 ease-in-out;
-
+    font-size: 46px;
+}
+.c_box .text{
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 0;
+    font-size: 26px;
+    color: #fff;
+    font-weight: 100;
 }
 
-.card:nth-child(1):before{
-    background: url(img/about.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: none;
+svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 997;
 }
-.card:nth-child(2):before{
-    background: url(img/projects.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -2;
+svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #383838;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+
 }
-.card:nth-child(3):before{
-    background: url(img/skills.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -2;
-}
-.card:nth-child(4):before{
-    background: url(img/contact.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -2;
+svg circle:nth-child(2){
+    stroke-dasharray: 378;
+    stroke-dashoffset: 378;
 }
 
-/* a */
-/* b */
-/* o */
-/* u */
-/* t */
+.card:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(378 - (378 * 89) / 100);
+    stroke: rgb(255, 6, 234);
+}
+
+.card:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(378 - (378 * 74) / 100);
+    stroke: rgb(6, 255, 234);
+}
+.card:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(378 - (378 * 34) / 100);
+    stroke: rgb(0, 255, 42);
+}
+.card:nth-child(4) svg circle:nth-child(2){
+    stroke-dashoffset: calc(378 - (378 * 60) / 100);
+    stroke: rgb(255, 43, 6);
+}
+
+/* h2 colors */
+.card:nth-child(1) .percent .number h2:nth-child(1){
+    color: rgb(255, 6, 234);
+}
+.card:nth-child(2) .percent .number h2:nth-child(1){
+    color: rgb(6, 255, 234);
+}
+.card:nth-child(3) .percent .number h2:nth-child(1){
+    color: rgb(0, 255, 42);
+}
+.card:nth-child(4) .percent .number h2:nth-child(1){
+    color: rgb(255, 43, 6);
+}
+
+/*  */
+
 
 /* s */
 /* e */
@@ -363,7 +398,7 @@ section .title::after{
 .about .about_content .sideBarRight .text{
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
+    font-weight: 378;
     font-size: 36px;
     text-align: center;
     padding: 5px;
@@ -550,7 +585,7 @@ section .title::after{
 }
 .testimonials .carousel .card_b .text{
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 378;
     color: crimson;
     padding: 15px 0 7px 0;
 }
@@ -631,7 +666,7 @@ section .title::after{
 .contact .bigBox .text{
     color: crimson;
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 378;
     text-decoration: underline;
 }
 .contact .bigBox p{
@@ -733,10 +768,13 @@ footer .design{
 @media (max-width: 820px){
     .home{
         background: url(img/dark_lap_small.png);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .mainMenu{
         padding: 0;
         width: 90%;
+        margin: auto;
     }
     .navBar .menu_btn{
         display: block;
@@ -821,29 +859,15 @@ footer .design{
     .intro_txt p{
         font-size: 18px;
     }
-    .cardHolder{
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        /* background: #64e8ff; */
-    }
     
-    .cardHolder .card{
-        width: 85%;
-        margin: 0 auto;
-        transform: translate(0, 0);
+    .skills{
+        flex-direction: column;
+    }
+    .card{
+        width: 70%;
+        margin: 20px 0 0 0;
     }
 
-    
-    .card:hover p, .card:hover h3{
-        opacity: 1;
-    }
-    .card:nth-child(1):before,
-    .card:nth-child(2):before,
-    .card:nth-child(3):before,
-    .card:nth-child(4):before{
-        background-image: none;
-    }
      
     .about .about_content .sideBarLeft img{
         height: 300px;
